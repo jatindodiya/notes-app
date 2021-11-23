@@ -1,0 +1,23 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "this is my first notes tutorial app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatindodiya/notes-app.git"
+  },
+  "keywords": [
+    "notes",
+    "app"
+  ],
+  "author": "Jatin Dodiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jatindodiya/notes-app/issues"
+  },
+  "homepage": "https://github.com/jatindodiya/notes-app#readme"
+}
