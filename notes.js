@@ -7,9 +7,10 @@ const getNotes = function () {
 const addNote = function (title, body) {
     const notes = loadNotes()
     const duplicateNotes = notes.filter(function (note) {
+        // console.log("note---------------------"+JSON.stringify(note))
         return note.title === title
     })
-
+    // console.log(duplicateNotes)
     if (duplicateNotes.length === 0) {
         notes.push({
             title: title,
@@ -37,7 +38,22 @@ const loadNotes = function () {
     }
 }
 
+const removeNotes = function(title){
+    const notes = loadNotes()
+    const notesToKeep = notes.filter(function(note){
+        return note.title !== title
+    })
+    saveNotes(notesToKeep)
+}
+
+const showAllNotes = function(){
+    const notes = loadNotes()
+    console.log(notes)
+}
+
 module.exports = {
     getNotes: getNotes,
-    addNote: addNote
+    addNote: addNote,
+    removeNotes: removeNotes,
+    showAllNotes: showAllNotes,
 }
